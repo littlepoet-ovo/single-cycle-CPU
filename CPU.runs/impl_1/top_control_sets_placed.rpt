@@ -1,0 +1,87 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Mar 17 10:40:55 2024
+| Host         : LittlePoet running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    18 |
+| Unused register locations in slices containing registers |    51 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            2 |
+|      2 |            2 |
+|      3 |            1 |
+|      4 |            2 |
+|      8 |            1 |
+|    16+ |           10 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             118 |           67 |
+| No           | No                    | Yes                    |              33 |           12 |
+| No           | Yes                   | No                     |              62 |           16 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------+------------------------------------+-----------------------+------------------+----------------+
+|               Clock Signal              |            Enable Signal           |    Set/Reset Signal   | Slice Load Count | Bel Load Count |
++-----------------------------------------+------------------------------------+-----------------------+------------------+----------------+
+|  U_CPU/ifu/U_PC/MemtoReg_reg_i_1_2      |                                    |                       |                1 |              1 |
+|  U_CPU/maincontrol/Result_reg[15]_i_4_0 |                                    |                       |                1 |              1 |
+|  U_CPU/ifu/U_PC/MemtoReg_reg_i_1_3      |                                    |                       |                1 |              2 |
+|  U_CPU/ifu/U_PC/ALUOp_reg[2]_i_5_2[0]   |                                    |                       |                1 |              2 |
+|  U_FRQNCYDVD/CLK                        |                                    | SW_IBUF[0]            |                2 |              3 |
+|  U_CPU/ifu/U_PC/E[0]                    |                                    |                       |                4 |              4 |
+|  clk100MHZ_IBUF_BUFG                    |                                    |                       |                2 |              4 |
+|  U_CPU/ifu/U_PC/rezero_reg_i_1_0        |                                    |                       |                5 |              8 |
+|  U_CPU/maincontrol/Extop_reg[1]_0[0]    |                                    |                       |               14 |             30 |
+| ~clk_BUFG                               |                                    | SW_IBUF[0]            |               10 |             30 |
+|  clk100MHZ_IBUF_BUFG                    |                                    | U_FRQNCYDVD/clk1000Hz |                8 |             31 |
+|  clk100MHZ_IBUF_BUFG                    |                                    | U_FRQNCYDVD/clk10Hz   |                8 |             31 |
+|  n_0_1507_BUFG                          |                                    |                       |               38 |             66 |
+| ~clk_BUFG                               | U_CPU/maincontrol/RegWrite         |                       |               12 |             96 |
+| ~clk_BUFG                               | U_CPU/alu/MemWrite_reg_0           |                       |               32 |            128 |
+| ~clk_BUFG                               | U_CPU/alu/MemWrite_reg             |                       |               32 |            128 |
+| ~clk_BUFG                               | U_CPU/maincontrol/Result_reg[11]   |                       |               32 |            128 |
+| ~clk_BUFG                               | U_CPU/maincontrol/Result_reg[11]_0 |                       |               32 |            128 |
++-----------------------------------------+------------------------------------+-----------------------+------------------+----------------+
+
+

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Mar 19 23:27:36 2024
+# Process ID: 26448
+# Current directory: G:/Vivado/CPU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19784 G:\Vivado\CPU\CPU.xpr
+# Log file: G:/Vivado/CPU/vivado.log
+# Journal file: G:/Vivado/CPU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project G:/Vivado/CPU/CPU.xpr
